@@ -37,7 +37,8 @@ public class OrganizationControllerTests {
         given().when().get("/organizations/{id}/with-departments", 1L).then().statusCode(200)
                 .body(notNullValue())
                 // TODO: how many departments do we have?
-                .body("departments.size()", is(3));
+                //Abbiamo 1 dipartimento
+                .body("departments.size()", is(1));
     }
 
     @Test
